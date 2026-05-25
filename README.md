@@ -1,6 +1,18 @@
 # Cloud-Connected-Environmental-Data-Logger-with-Excel-Reporting
 The Cloud-Connected Environmental Data Logger with Excel Reporting is an embedded system that monitors temperature, humidity, and gas levels using sensors. The data is uploaded to the cloud for remote access and stored in Excel reports for analysis, helping in real-time environmental monitoring and easy data management.
 
+# Description
+
+This project is implemented using the LPC2148 ARM7 microcontroller and integrates multiple peripherals including ADC, RTC, UART, I2C EEPROM, LCD, keypad, gas sensor, temperature sensor, and ESP01 Wi-Fi module.
+
+The LM35 sensor is used to measure temperature, while the MQ-2 sensor detects gas or smoke leakage conditions. The LPC2148 processes all sensor data and displays live information on a 16x2 LCD.
+
+Using the ESP01 Wi-Fi module, the system uploads environmental data to the ThingSpeak cloud platform for remote monitoring. The system also supports threshold-based alerts using a buzzer whenever abnormal environmental conditions are detected.
+
+User-configurable temperature set points are stored inside EEPROM to retain values even during power failures. The project also supports RTC editing through a keypad interface for flexible date and time management.
+
+This project demonstrates real-time embedded monitoring, cloud connectivity, EEPROM data management, and IoT-based environmental logging in a single integrated system.
+
 # Block diagram
 <img width="890" height="603" alt="block" src="https://github.com/user-attachments/assets/e87c6f77-3b51-40ba-90ad-68a07c44c8f6" />
 
@@ -42,6 +54,54 @@ The project is highly useful in modern IoT and smart monitoring applications whe
 # Project outputs
 ## Hardware
 <img width="1600" height="1200" alt="output" src="https://github.com/user-attachments/assets/5103d9a1-0a84-4427-84c1-10520eb83cbe" />
+
+## Output
+
+### Normal Monitoring Mode
+
+
+06:50:26  T:30°C
+
+11/03/26  SMOKE:0
+
+
+- Real-time clock and date displayed using RTC
+
+- Live temperature displayed from LM35 sensor
+
+- Smoke detection status displayed from MQ-2 sensor
+
+---
+
+### Temperature Alert Mode
+
+
+Warning...
+
+Temp>Set Point
+
+
+- Alert message displayed when temperature exceeds predefined threshold
+
+- Buzzer indication activated during warning condition
+
+- Alert information uploaded to cloud platform
+
+---
+
+### Cloud Output
+
+Temperature values and smoke detection status are uploaded to ThingSpeak cloud for remote monitoring and Excel-based reporting.
+
+---
+
+### Alert Condition
+
+
+\\\[ALERT] High Temperature Warning
+
+\\\[ALERT] Gas Leakage Detected
+
 
 ## Cloud 
 <img width="1281" height="832" alt="cloud" src="https://github.com/user-attachments/assets/f8dc4e13-01b3-430e-b847-528d20354ca8" />
