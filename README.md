@@ -106,6 +106,10 @@ Temperature values and smoke detection status are uploaded to ThingSpeak cloud f
 ## Cloud 
 <img width="1281" height="832" alt="cloud" src="https://github.com/user-attachments/assets/f8dc4e13-01b3-430e-b847-528d20354ca8" />
 
+## clould excel sheet
+
+<img width="991" height="664" alt="excel" src="https://github.com/user-attachments/assets/c46d5e91-4d73-4aae-b2ad-9d50855d0645" />
+
 # Applications
 
 * Smart Environment Monitoring
